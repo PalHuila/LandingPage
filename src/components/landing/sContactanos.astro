@@ -1,4 +1,4 @@
-<section id="contactenos" class="bg:h-[400px] sm:h-[450px] md:h-[500px] bg:mt-[300px] lg:mt-[0px] bg-primary-50 ">
+<section id="contactenos" class="bg:h-[400px] sm:h-[450px] md:h-[500px] mt-[10%] bg-primary-50 ">
   <div class=" bg-primary-400 w-[100%] h-[100%] pt-24 " style="clip-path: ellipse(80% 100% at center top);">
     <p class="text-primary-50 text-center bg:text-[8vw]/[0] md:text-[4vw]/[0.3] 8xl:text-[2vw]/[0.5] font-Blinker font-black">
       ¡Animate a Contactarnos!
@@ -8,23 +8,46 @@
     <p class="text-primary-50 text-center bg:text-[5vw]/[0.9] md:text-[2.6vw]/[0.9] 8xl:text-[1vw]/[0.9] font-Blinker font-medium bg:mt-[5%] bg:mb-[5%] bg:mx-[5%] md:mt-[2%] md:mb-[2%] 8xl:mt-[.6%] 8xl:mb-[.6%]">
       En CenturHuila te invitamos a resolver tus dudas escribiendonos
     </p>
-    <form>
+    <form action="enviar_correo.php" method="post">
       <div class="flex flex-wrap justify-center font-Blinker font-bold content-center ">
           <div class="flex justify-center content-center bg:basis-[45%] md:basis-[30%] mx-[2%] mb-[2%]">
-              
-              <input type="text" id="mail" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 w-[100%] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Tu Email" required>
+              <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 w-[100%] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Tu Email" required>
           </div>
           <div class="flex justify-center content-center bg:basis-[45%] md:basis-[30%] mx-[2%] mb-[2%]">
-            
-              <input type="text" id="message" class="bg-gray-50 border border-gray-300 text-primary text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 w-[100%]"  placeholder="Mensaje" required>
+              <input type="text" name="mensaje" id="mensaje" class="bg-gray-50 border border-gray-300 text-primary text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 w-[100%]" placeholder="Mensaje" required>
           </div>
           <div class="flex justify-center content-center xs:col-span-2 md:col-span-1 bg:basis-[35%] md:basis-[20%] mx-[2%] mb-[2%]">
-            
-            <button type="submit" class="display block  text-primary-400 hover:bg-white bg-white focus:ring-4 focus:outline-none focus:ring-blue-300  rounded-lg text-sm p-2.5 text-centerdark:focus:ring-blue-800 w-[100%]">Enviar</button>
+              <button type="submit" class="display block  text-primary-400 hover:bg-white bg-white focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm p-2.5 text-centerdark:focus:ring-blue-800 w-[100%]">Enviar</button>
           </div>
       </div>
-     
   </form>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("contact-form");
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            const formData = new FormData(form);
+            try {
+                const response = await fetch("/enviar_correo", {
+                    method: "POST",
+                    body: formData,
+                });
+                if (response.ok) {
+                    // Mostrar mensaje emergente de éxito
+                    alert("¡Mensaje enviado! Gracias por contactarnos.");
+                    form.reset();
+                } else {
+                    throw new Error("Error al enviar el mensaje.");
+                }
+            } catch (error) {
+                console.error(error);
+                // Mostrar mensaje emergente de error
+                alert("Hubo un problema al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.");
+            }
+        });
+    });
+</script>
 
 
  
