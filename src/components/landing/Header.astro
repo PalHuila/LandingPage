@@ -1,27 +1,95 @@
+<!-- Tipo: Comienzo del componente header. Descripción: Encabezado del sitio web con barra de navegación y logo. -->
 <header class="mb-20 z-50">
-    <nav class="border-primary-50 lg:px-5 py-2.5 rounded-br-lg rounded-bl-lg items-center bg-primary-50 dark:bg-gray-900 fixed w-full z-50 top-0 left-0 border-b">
-        <div class="flex flex-wrap justify-center items-center">
-            <a href="" class="flex mr-[2%]">
-                <span class="font-Work font-[1000] self-center xs:text-lg sm:text-3xl whitespace-nowrap text-primary-300 ms-2">CenturHuila</span>
-                <img dir="ltr" src="centurhuila.svg" class="h-9 sm:h-9" alt="CenturHuila" loading="lazy" />
-            </a>
-            <div x-data="menu" class="flex items-center lg:order-2">
-                <a href="#" class="font-Work text-white bg-primary-300 hover:bg-primary-700 focus:ring-4 focus:ring-primary-300 rounded-lg bg:text-xs sm:text-xl px-3 lg:px-3 py-2 lg:py-2.5 dark:bg-primary-500 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">Consigue la APP</a>
-                <button @click="expanded = !expanded" data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-                    <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </button>
-            </div>
-            <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-0 bg:mr-[10%] xl:mr-[40%] 3xl:mr-[55%]" :class="{ 'hidden': !expanded }" id="mobile-menu-2">
-                <ul class="flex flex-col font-medium lg:flex-row lg:space-x-8 lg:items-center">
-                    <li>
-                        <a href="#" @click="expanded = false" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-500 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Acerca de nosotros</a>
-                    </li>
-                    <li>
-                        <a href="#contactenos" @click="expanded = false" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-500 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Contáctenos</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <!-- Tipo: Comienzo de la barra de navegación. Descripción: Contiene el menú de navegación y el logo del sitio. -->
+  <nav
+    class="border-primary-50 lg:px-5 py-2.5 rounded-br-lg rounded-bl-lg items-center bg-primary-50 dark:bg-gray-900 fixed w-full z-50 top-0 left-0 border-b"
+  >
+    <!-- Tipo: Contenedor principal. Descripción: Contiene todos los elementos del encabezado alineados en una fila. -->
+    <div class="flex flex-wrap justify-center items-center">
+      <!-- Tipo: Enlace al inicio. Descripción: Logo del sitio con enlace a la página principal. -->
+      <a href="index.html" class="flex mr-[2%]">
+        <span
+          class="font-Work font-[1000] self-center xs:text-lg sm:text-3xl whitespace-nowrap text-primary-300 ms-2"
+          >CenturHuila</span
+        >
+        <img
+          dir="ltr"
+          src="centurhuila.svg"
+          class="h-9 sm:h-9"
+          alt="CenturHuila"
+          loading="lazy"
+        />
+      </a>
+      <!-- Tipo: Contenedor del menú de navegación en dispositivos móviles. Descripción: Se muestra solo en dispositivos móviles y contiene el botón para desplegar el menú. -->
+      <div x-data="menu" class="flex items-center lg:order-2">
+        <!-- Tipo: Botón para descargar la APP. Descripción: Botón para descargar la aplicación móvil del sitio. -->
+        <a
+          href="index.html#banner"
+          class="font-Work text-white bg-primary-300 hover:bg-primary-700 focus:ring-4 focus:ring-primary-300 rounded-lg bg:text-xs sm:text-xl px-3 lg:px-3 py-2 lg:py-2.5 dark:bg-primary-500 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
+          >Consigue la APP</a
+        >
+        <!-- Tipo: Botón para desplegar el menú en dispositivos móviles. Descripción: Botón para mostrar u ocultar el menú en dispositivos móviles. -->
+        <button
+          @click="expanded = !expanded"
+          data-collapse-toggle="mobile-menu-2"
+          type="button"
+          class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="mobile-menu-2"
+          aria-expanded="false"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+            ><path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"></path></svg
+          >
+          <svg
+            class="hidden w-6 h-6"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+            ><path
+              fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd"></path></svg
+          >
+        </button>
+      </div>
+      <!-- Tipo: Menú de navegación en dispositivos de escritorio. Descripción: Contiene los enlaces del menú en dispositivos de escritorio. -->
+      <div
+        class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-0 bg:mr-[10%] xl:mr-[40%] 3xl:mr-[55%]"
+        :class="{ 'hidden': !expanded }"
+        id="mobile-menu-2"
+      >
+        <ul
+          class="flex flex-col font-medium lg:flex-row lg:space-x-8 lg:items-center"
+        >
+          <!-- Tipo: Enlace a la página "Acerca de nosotros". Descripción: Enlace a la sección "Acerca de nosotros" del sitio. -->
+          <li>
+            <a
+              href="AboutUs.html"
+              @click="expanded = false"
+              class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-500 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+              >Acerca de nosotros</a
+            >
+          </li>
+          <!-- Tipo: Enlace a la sección de "Contáctenos". Descripción: Enlace a la sección de contacto del sitio. -->
+          <li>
+            <a
+              href="#contactenos"
+              @click="expanded = false"
+              class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-500 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+              >Contáctenos</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Tipo: Fin de la barra de navegación. -->
 </header>
+<!-- Tipo: Fin del componente header. -->

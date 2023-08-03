@@ -1,27 +1,75 @@
-<section id="contactenos" class="bg:h-[400px] sm:h-[450px] md:h-[500px] mt-[10%] bg-primary-50 ">
-  <div class=" bg-primary-400 w-[100%] h-[100%] pt-24 " style="clip-path: ellipse(80% 100% at center top);">
-    <p class="text-primary-50 text-center bg:text-[8vw]/[0] md:text-[4vw]/[0.3] 8xl:text-[2vw]/[0.5] font-Blinker font-black">
-      ¡Animate a Contactarnos!
+<!-- Aquí empieza el componente "contactenos" -->
+<section
+  id="contactenos"
+  class="bg:h-[400px] sm:h-[450px] md:h-[500px] mt-[10%] bg-primary-50"
+>
+  <div
+    class="bg-primary-400 w-[100%] h-[100%] pt-24"
+    style="clip-path: ellipse(80% 100% at center top);"
+  >
+    <!-- Título principal -->
+    <p
+      class="text-primary-50 text-center bg:text-[8vw]/[0] md:text-[4vw]/[0.3] 8xl:text-[2vw]/[0.5] font-Blinker font-black"
+    >
+      ¡Anímate a Contactarnos!
     </p>
-    
-    <hr class="mt-7 border-primary-50 border-y-[2.2px] rounded w-[80%] mx-auto"/>
-    <p class="text-primary-50 text-center bg:text-[5vw]/[0.9] md:text-[2.6vw]/[0.9] 8xl:text-[1vw]/[0.9] font-Blinker font-medium bg:mt-[5%] bg:mb-[5%] bg:mx-[5%] md:mt-[2%] md:mb-[2%] 8xl:mt-[.6%] 8xl:mb-[.6%]">
-      En CenturHuila te invitamos a resolver tus dudas escribiendonos
+
+    <!-- Separador horizontal -->
+    <hr
+      class="mt-7 border-primary-50 border-y-[2.2px] rounded w-[80%] mx-auto"
+    />
+
+    <!-- Descripción del formulario -->
+    <p
+      class="text-primary-50 text-center bg:text-[5vw]/[0.9] md:text-[2.6vw]/[0.9] 8xl:text-[1vw]/[0.9] font-Blinker font-medium bg:mt-[5%] bg:mb-[5%] bg:mx-[5%] md:mt-[2%] md:mb-[2%] 8xl:mt-[.6%] 8xl:mb-[.6%]"
+    >
+      En CenturHuila te invitamos a resolver tus dudas escribiéndonos
     </p>
+
+    <!-- Formulario de contacto -->
     <form action="https://formsubmit.co/info@centurhuila.com.co" method="POST">
-      <div class="flex flex-wrap justify-center font-Blinker font-bold content-center ">
-          <div class="flex justify-center content-center bg:basis-[45%] md:basis-[30%] mx-[2%] mb-[2%]">
-              <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 w-[100%] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Tu Email" required>
-          </div>
-          <div class="flex justify-center content-center bg:basis-[45%] md:basis-[30%] mx-[2%] mb-[2%]">
-            <textarea name="Message" id="Message" rows="1" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Escribe el mensaje aqui..."></textarea>
-          </div>
-          <div class="flex justify-center content-center xs:col-span-2 md:col-span-1 bg:basis-[35%] md:basis-[20%] mx-[2%] mb-[2%]">
-              <button type="submit" class="display block  text-primary-400 hover:bg-white bg-white focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm p-2.5 text-centerdark:focus:ring-blue-800 w-[100%]">Enviar</button>
-          </div>
+      <div
+        class="flex flex-wrap justify-center font-Blinker font-bold content-center"
+      >
+        <!-- Campo de correo electrónico -->
+        <div
+          class="flex justify-center content-center bg:basis-[45%] md:basis-[30%] mx-[2%] mb-[2%]"
+        >
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 w-[100%] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Tu Email"
+            required
+          />
+        </div>
+
+        <!-- Campo de mensaje -->
+        <div
+          class="flex justify-center content-center bg:basis-[45%] md:basis-[30%] mx-[2%] mb-[2%]"
+        >
+          <textarea
+            name="Message"
+            id="Message"
+            rows="1"
+            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Escribe el mensaje aquí..."></textarea>
+        </div>
+
+        <!-- Botón de envío -->
+        <div
+          class="flex justify-center content-center xs:col-span-2 md:col-span-1 bg:basis-[35%] md:basis-[20%] mx-[2%] mb-[2%]"
+        >
+          <button
+            type="submit"
+            class="display block text-primary-400 hover:bg-white bg-white focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm p-2.5 text-centerdark:focus:ring-blue-800 w-[100%]"
+            >Enviar</button
+          >
+        </div>
       </div>
-  </form>
-  
+    </form>
+
+    <!-- Aquí termina el componente "contactenos" -->
   </div>
-  
 </section>
