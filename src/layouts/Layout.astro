@@ -1,39 +1,49 @@
+<!-- Importa el archivo de estilos "Layout.css" -->
 ---
-import "../styles/Layout.css"
-const {title} = Astro.props
+import "../styles/Layout.css";
+const { title } = Astro.props;
 ---
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-                    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css"  rel="stylesheet" />
-                    <link rel="preconnect" href="https://fonts.googleapis.com">
-                    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-                    <link href="https://fonts.googleapis.com/css2?family=Blinker:wght@900&display=swap" rel="stylesheet">
-                    <link rel="icon" href="centurhuila.svg" type="image/x-icon">
-                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <head>
+    <!-- Enlaces a hojas de estilo y fuentes externas -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Blinker:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Ícono de la página web -->
+    <link rel="icon" href="centurhuila.svg" type="image/x-icon" />
+    <!-- Enlace a una biblioteca de iconos (FontAwesome) -->
+ 
 
-                      <meta charset="UTF-8">
-                      <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1.0 minimum-width=354">
-                      <title>Centurhuila - {title}</title>
-</head>
-<body>
-             
-                    <main class="flex-grow">
-
-                                        <slot/>
-                    </main>
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
-                    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-                    <script>
-                      document.addEventListener('alpine:init', () => {
-                          Alpine.data('menu', () => ({
-                              expanded: false,
-                              closeMenu() {
-                                  this.expanded = false;
-                              },
-                          }));
-                      });
-                  </script>
-
-</body>
+    <!-- Configuraciones de codificación y vista del documento -->
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 minimum-scale=1.0"
+    />
+    <!-- Título de la página con el valor de la variable "title" de Astro.props -->
+    <title>Centurhuila - {title}</title>
+  </head>
+  <body>
+    <!-- Contenido principal del sitio -->
+    <main class="flex-grow">
+      <slot />
+    </main>
+    <!-- Enlaces a scripts externos -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js" async
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </body>
 </html>
