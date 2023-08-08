@@ -2,22 +2,30 @@
 ---
 import "../styles/Layout.css";
 const { title } = Astro.props;
+
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
+
     <!-- Enlaces a hojas de estilo y fuentes externas -->
+    <meta
+  name="description"
+  content="Descubre el encanto del Huila con la mejor plataforma de turismo. Descarga gratis nuestra app de turismo y sumérgete en guías, recomendaciones y emocionantes actividades."
+>
+
+
+
     <link
+    media="print" onload="this.onload=null;this.removeAttribute('media');"
       href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css"
       rel="stylesheet"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Blinker:wght@900&display=swap"
-      rel="stylesheet"
-    />
+    
     <!-- Ícono de la página web -->
     <link rel="icon" href="centurhuila.svg" type="image/x-icon" />
     <!-- Enlace a una biblioteca de iconos (FontAwesome) -->
@@ -39,11 +47,15 @@ const { title } = Astro.props;
     </main>
     <!-- Enlaces a scripts externos -->
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js" async
+      defer 
+      src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"
     ></script>
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    
     ></script>
+    
+
   </body>
 </html>
