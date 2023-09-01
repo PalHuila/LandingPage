@@ -4,88 +4,82 @@
 
 <!--Aqui va el banner principal-->
 <div
-  class="flex flex-row text-center md:text-left bg:flex-col md:flex-row mt-8 relative px-8 sm:px-20 md:px-12 lg:px-20 xl:px-32 7xl:px-64"
+  class="relative flex flex-row text-center md:text-left bg:flex-col md:flex-row mt-8 bg:px-10 md:px-20 "
 >
+  <div class="relative flex flex-col md:flex-row bg:w-full xl:w-[1280px] mx-auto"> 
+
+    <article class="bg:w-full bg:min-w-full md:min-w-[70%]">
+      <!--Aqui va la sección del titulo principal-->
+      <section
+        class="max-h-[45%] left-0 right-0 mx-auto z-50"
+      >
+        <p
+          class="font-Blinker bg:text-4xl/[0.9] bg:mt-10 md:text-5xl/[0.9] md:mt-10 text-lime-50 font-[900] font-blinker"
+        >
+          ¡Pertenece a la <strong class="text-lime-700">mejor plataforma</strong> de turismo del Huila hoy mismo!
+        </p>
+    
+      </section>
+      <!--Aqui termina la sección del titulo principal-->
+      <!--Aqui el parrafo descriptivo del titulo principal-->
+      <section
+        class="max-h-[20%] bg:mt-[2.7vw] md:mt-[3vw] 4xl:mt-[3vw] 5xl:mt-[3.7vw] 8xl:mt-[0.4vw] leading-3"
+      >
+        <span
+          class="font-Josefin text-lime-50 bg:text-base/[0.9] font-blinker leading-none"
+          >Descubre el encanto del Huila con nuestra app de turismo. Descárgala
+          gratis y disfruta de guías, recomendaciones y actividades emocionantes.
+          Sin costos ni condiciones, aumenta tu visibilidad y reconocimiento con
+          CenturHuila. ¡Descárgala ahora y vive experiencias inolvidables en el
+          Huila!</span
+        >
+      </section>
+      <!--Aqui el parrafo descriptivo del titulo principal-->
+      <!--Aqui va las dos insignias de descarga (Play store & AppStore)-->
+      <section
+        class="flex flex-row bg:justify-center md:justify-start max-h-[25%] mt-[1vw] 8xl:mt-[1vw]s"
+      >
+        <a
+          href="https://play.google.com/store/apps/details?id=com.ycjn.centurhuila&hl=es_CO&gl=US"
+          target="_blank"
+         
+        >
+     
+          <img width=? height=? 
+            class="bg:h-10 xs:h-14 sm:h-50 md:h-10 md2:h-12 lg:h-14 2xl:h-16 3xl:h-24 6xl:h-32"
+            src="GooglePlay.svg"
+            loading="lazy"
+            alt="Descargar en Google Play"
+          />
+         
+        </a>
+        <div class="mx-2"></div>
+        <a
+          href="https://apps.apple.com/co/app/centurhuila-3-0/id1598598341"
+          target="_blank"
+         
+        >
+  
+          <img
+            class="bg:h-10 xs:h-14 sm:h-50 md:h-10 md2:h-12 lg:h-14 2xl:h-16 3xl:h-24 6xl:h-32"
+            src="Ios.svg"
+            loading="lazy"
+            alt="Descargar en App Store"
+          />
+        </a>
+      </section>
+      <!--Aqui termina las dos insignias de descarga (Play store & AppStore)-->
+    </article>
+    <!--Aqui termina el articulo que ocupa el 70% del ancho-->
+  
+    <!--Aqui va el telefonocroma con la captura de pantalla y el articulo que ocupa el 30% del ancho-->
+    <article
+      class="flex bg:min-w-full md:min-w-[30%] content-center justify-center bg:-rotate-6 md:rotate-0"
+    >
+      <img class="mt-10" src="Wire.webp" loading="lazy" alt="Mockup1" />
+    </article>
+  </div>
   <!--Aqui va el articulo que ocupa el 70% del ancho-->
-  <article class="bg:w-full bg:max-w-full md:w-70% md:max-w-[70%]">
-    <!--Aqui va la sección del titulo principal-->
-    <section
-      class="max-h-[45%] left-0 right-0 mx-auto z-50 mt-3 sm:mt-10 md:mt-10 lg:mt-23 xl:mt-20 7xl:mt-40"
-    >
-      <p
-        class="font-Blinker bg:text-[9vw]/[0.9] md:text-[7vw]/[0.7] 8xl:text-[2vw]/[0.9] text-lime-50 font-[900] font-blinker"
-      >
-        ¡Pertenece a la
-      </p>
-      <p
-        class="font-Blinker bg:text-[9vw]/[0.9] md:text-[7vw]/[0.7] 8xl:text-[2vw]/[0.9] text-lime-600 font-[900] font-blinker"
-      >
-        mejor plataforma<br />
-      </p>
-      <p
-        class="font-Blinker bg:text-[9vw]/[0.9] md:text-[7vw]/[0.7] 8xl:text-[2vw]/[0.9] text-lime-50 font-[900] font-blinker"
-      >
-        de turismo del Huila hoy mismo!
-      </p>
-    </section>
-    <!--Aqui termina la sección del titulo principal-->
-    <!--Aqui el parrafo descriptivo del titulo principal-->
-    <section
-      class="max-h-[20%] bg:mt-[2.7vw] md:mt-[3vw] 4xl:mt-[3vw] 5xl:mt-[3.7vw] 8xl:mt-[0.4vw] leading-3"
-    >
-      <span
-        class="font-Josefin text-lime-50 bg:text-[4vw]/[1.1] md:text-[1.7vw]/[1.1] 8xl:text-[1vw]/[0.9] font-blinker leading-none"
-        >Descubre el encanto del Huila con nuestra app de turismo. Descárgala
-        gratis y disfruta de guías, recomendaciones y actividades emocionantes.
-        Sin costos ni condiciones, aumenta tu visibilidad y reconocimiento con
-        CenturHuila. ¡Descárgala ahora y vive experiencias inolvidables en el
-        Huila!</span
-      >
-    </section>
-    <!--Aqui el parrafo descriptivo del titulo principal-->
-    <!--Aqui va las dos insignias de descarga (Play store & AppStore)-->
-    <section
-      class="flex flex-row bg:justify-center md:justify-start max-h-[25%] mt-[1vw] 8xl:mt-[1vw]s"
-    >
-      <a
-        href="https://play.google.com/store/apps/details?id=com.ycjn.centurhuila&hl=es_CO&gl=US"
-        target="_blank"
-        alt="Descargar TurismoHuila en la Play Store"
-      >
-   
-        <img width=? height=? 
-          class="bg:h-10 xs:h-14 sm:h-50 md:h-10 md2:h-12 lg:h-14 2xl:h-16 3xl:h-24 6xl:h-32"
-          src="GooglePlay.svg"
-          loading="lazy"
-          alt="Descargar en Google Play"
-        />
-       
-      </a>
-      <div class="mx-2"></div>
-      <a
-        href="https://apps.apple.com/co/app/centurhuila-3-0/id1598598341"
-        target="_blank"
-        alt="Descargar TurismoHuila en la App Store"
-      >
-
-        <img
-          class="bg:h-10 xs:h-14 sm:h-50 md:h-10 md2:h-12 lg:h-14 2xl:h-16 3xl:h-24 6xl:h-32"
-          src="Ios.svg"
-          loading="lazy"
-          alt="Descargar en App Store"
-        />
-      </a>
-    </section>
-    <!--Aqui termina las dos insignias de descarga (Play store & AppStore)-->
-  </article>
-  <!--Aqui termina el articulo que ocupa el 70% del ancho-->
-
-  <!--Aqui va el telefonocroma con la captura de pantalla y el articulo que ocupa el 30% del ancho-->
-  <article
-    class="flex bg:w-full md:max-w-[30%] content-center justify-center bg:-rotate-6 md:rotate-0"
-  >
-    <img class="mt-10" src="Wire.webp" loading="lazy" alt="Mockup1" />
-  </article>
   <!--Aqui termina el telefonocroma con la captura de pantalla y el articulo que ocupa el 30% del ancho-->
 
   <!--Aqui va el svg horizontal para pantallas que no son de mobiles-->
