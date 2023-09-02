@@ -5,15 +5,15 @@ var menu = {
 ---
 
 <!-- Tipo: Comienzo del componente header. Descripción: Encabezado del sitio web con barra de navegación y logo. -->
-<header class="mb-20 z-50">
+<header class="mb-20 z-50  ">
   <!-- Tipo: Comienzo de la barra de navegación. Descripción: Contiene el menú de navegación y el logo del sitio. -->
   <nav
-    class="border-primary-50 lg:px-5 py-2.5 rounded-br-lg rounded-bl-lg items-center bg-white dark:bg-gray-900 fixed w-full z-50 top-0 left-0 border-b"
+    class="border-primary-50 lg:px-5 py-2.5 rounded-br-lg rounded-bl-lg items-center bg-white dark:bg-gray-900 fixed w-full z-50 top-0 left-0 border-b "
   >
     <!-- Tipo: Contenedor principal. Descripción: Contiene todos los elementos del encabezado alineados en una fila. -->
-    <div class="flex flex-wrap justify-center items-center">
+    <div class="flex flex-wrap justify-center items-center max-w-[1280px] mx-auto xl:min-w-[1280px]">
       <!-- Tipo: Enlace al inicio. Descripción: Logo del sitio con enlace a la página principal. -->
-      <a href="index.html" class="flex mr-[2%]">
+      <a href="index.html" class="flex  mr-5">
         <span
           class="font-Work font-[1000] self-center xs:text-lg sm:text-3xl whitespace-nowrap text-primary-500 ms-2"
           >CenturHuila</span
@@ -27,7 +27,7 @@ var menu = {
         />
       </a>
       <!-- Tipo: Contenedor del menú de navegación en dispositivos móviles. Descripción: Se muestra solo en dispositivos móviles y contiene el botón para desplegar el menú. -->
-      <div  class="flex items-center lg:order-2">
+      <div  class="flex items-center lg:order-2 md:ml-[20%] ">
         <!-- Tipo: Botón para descargar la APP. Descripción: Botón para descargar la aplicación móvil del sitio. -->
         <a
           href="index.html#banner"
@@ -69,7 +69,7 @@ var menu = {
       </div>
       <!-- Tipo: Menú de navegación en dispositivos de escritorio. Descripción: Contiene los enlaces del menú en dispositivos de escritorio. -->
       <div
-        class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-0 bg:mr-[10%] xl:mr-[40%] 3xl:mr-[55%]"
+        class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-0 "
         :class="{ 'hidden': !expanded }"
         id="mobile-menu-2"
       >
@@ -95,6 +95,7 @@ var menu = {
             >
           </li>
         </ul>
+      </div>
       </div>
     </div>
   </nav>

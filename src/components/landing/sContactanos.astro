@@ -1,75 +1,49 @@
-<!-- Aquí empieza el componente "contactenos" -->
 <section
+  class="bg-white"
   id="contactenos"
-  class="bg:h-[400px] sm:h-[450px] md:h-[500px] mt-[10%] bg-white"
 >
+  <!-- ?Fondo verde oscuro en forma de elipse -->
   <div
-    class="bg-[#37a301] w-[100%] h-[100%] pt-24"
-    style="clip-path: ellipse(80% 100% at center top);"
+    class="bg-primary-500 pt-24 pb-24 "
+    style="clip-path: ellipse(80% 100% at center top)"
   >
-    <!-- Título principal -->
-    <p
-      class="text-primary-50 text-center bg:text-[8vw]/[0] md:text-[4vw]/[0.3] 8xl:text-[2vw]/[0.5] font-Blinker font-black"
-    >
-      ¡Anímate a Contactarnos!
-    </p>
 
-    <!-- Separador horizontal -->
-    <hr
-      class="mt-7 border-primary-50 border-y-[2.2px] rounded w-[80%] mx-auto"
-    />
+  <div class="xl:w-[1280px]  mx-auto flex flex-col ">
 
-    <!-- Descripción del formulario -->
-    <p
-      class="text-primary-50 text-center bg:text-[5vw]/[0.9] md:text-[2.6vw]/[0.9] 8xl:text-[1vw]/[0.9] font-Blinker font-medium bg:mt-[5%] bg:mb-[5%] bg:mx-[5%] md:mt-[2%] md:mb-[2%] 8xl:mt-[.6%] 8xl:mb-[.6%]"
-    >
-      En CenturHuila te invitamos a resolver tus dudas escribiéndonos
-    </p>
+      <h1 class="text-center font-Blinker font-black text-primary-100 bg:text-5xl xl:text-6xl 4xl:text-8xl">¡Anímate a contactarnos!</h1>
+      <hr class="border-primary-200 opacity-100 border-4 w-[80%] mx-auto my-0">
+      <div class="flex ">
 
-    <!-- Formulario de contacto -->
-    <form action="https://formsubmit.co/info@centurhuila.com.co" method="POST">
-      <div
-        class="flex flex-wrap justify-center font-Blinker font-bold content-center"
-      >
-        <!-- Campo de correo electrónico -->
-        <div
-          class="flex justify-center content-center bg:basis-[45%] md:basis-[30%] mx-[2%] mb-[2%]"
-        >
-          <input
-            type="email"
-            name="email"
-            id="email"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 w-[100%] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="Tu Email"
-            required
-          />
+
+    <form action="https://api.web3forms.com/submit" class="mt-10 mx-auto xl:w-[1280px] bg:w-full px-10">
+
+      <!-- This is a working contact form.
+           Get your free access key from: https://web3forms.com/  -->
+
+        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+        <div class="grid xl:grid-col-3">
+          <div class="relative z-0 mr-5">
+            <input type="text" name="name" class="peer block w-full bg-white  border-0 border-b  rounded-md border-white  py-2.5 px-3 text-base font-semibold focus:placeholder:text-white text-white focus:outline-none focus:ring-0 drop-shadow-2xl" placeholder="Tu nombre" />
+            <label class="absolute top-3 -z-10 origin-[0] -translate-y-10 scale-75 transform text-xl text-white font-semibold  duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-10 peer-focus:scale-75 ">Tu nombre</label>
+          </div>
+          <div class="relative z-0 ml-5">
+            <input type="text" name="email" class="peer block w-full appearance-none border-0 border-b rounded-md border-white bg-white py-2.5 px-3 text-base font-semibold focus:placeholder:text-white text-white focus:outline-none focus:ring-0 drop-shadow-2xl" placeholder="Tu email" />
+            <label class="absolute top-3 -z-10 origin-[0] -translate-y-10 scale-75 transform text-xl text-white font-semibold  duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-10 peer-focus:scale-75 ">Tu email</label>
+          </div>
+          <div class="relative z-0 col-span-2 mt-10">
+            <textarea name="message" rows="5" class="peer block min-h-[100px]  w-full appearance-none border-0 border-b rounded-md border-white bg-white py-2.5 px-3 text-base font-semibold focus:placeholder:text-white text-white  focus:outline-none focus:ring-0 drop-shadow-2xl" placeholder="Tu mensaje"></textarea>
+            <label class="absolute top-3 -z-10 origin-[0] -translate-y-10 scale-75 transform text-xl text-white font-semibold  duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-10 peer-focus:scale-75 ">Tu mensaje</label>
+          </div>
         </div>
+        <div class="flex justify-center">
 
-        <!-- Campo de mensaje -->
-        <div
-          class="flex justify-center content-center bg:basis-[45%] md:basis-[30%] mx-[2%] mb-[2%]"
-        >
-          <textarea
-            name="Message"
-            id="Message"
-            rows="1"
-            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="Escribe el mensaje aquí..."></textarea>
+          <button type="submit" class="mt-5  rounded-md bg-white px-14 py-2 text-primary-500 font-Blinker font-bold">Enviar mensaje</button>
         </div>
+      </form>
 
-        <!-- Botón de envío -->
-        <div
-          class="flex justify-center content-center xs:col-span-2 md:col-span-1 bg:basis-[35%] md:basis-[20%] mx-[2%] mb-[2%]"
-        >
-          <button
-            type="submit"
-            class="display block text-primary-600 hover:bg-white bg-white focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm p-2.5 text-centerdark:focus:ring-blue-800 w-[100%]"
-            >Enviar</button
-          >
-        </div>
       </div>
-    </form>
+  </div>
 
-    <!-- Aquí termina el componente "contactenos" -->
+
   </div>
 </section>
