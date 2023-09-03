@@ -1,7 +1,5 @@
 ---
-var menu = {
-
-}
+  
 ---
 
 <!-- Tipo: Comienzo del componente header. Descripción: Encabezado del sitio web con barra de navegación y logo. -->
@@ -15,7 +13,7 @@ var menu = {
       <!-- Tipo: Enlace al inicio. Descripción: Logo del sitio con enlace a la página principal. -->
       <a href="index.html" class="flex  mr-5">
         <span
-          class="font-Work font-[1000] self-center xs:text-lg sm:text-3xl whitespace-nowrap text-primary-500 ms-2"
+          class="font-Work font-[1000] self-center bg:text-2xl sm:text-3xl whitespace-nowrap text-primary-500 ms-2"
           >CenturHuila</span
         >
         <img
@@ -31,20 +29,18 @@ var menu = {
         <!-- Tipo: Botón para descargar la APP. Descripción: Botón para descargar la aplicación móvil del sitio. -->
         <a
           href="index.html#banner"
-          class="font-Work text-white font-bold bg-[#37a301] hover:bg-primary-700 focus:ring-4 focus:ring-primary-300 rounded-lg bg:text-xs sm:text-xl px-3 lg:px-3 py-2 lg:py-2.5 dark:bg-primary-500 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
+          class="font-Work text-white font-bold bg-[#37a301] hover:bg-primary-700 focus:ring-4 focus:ring-primary-300 rounded-lg bg:text-lg sm:text-xl px-3 lg:px-3 py-2 lg:py-2.5 dark:bg-primary-500 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
           >Conoce el Huila!</a
         >
         <!-- Tipo: Botón para desplegar el menú en dispositivos móviles. Descripción: Botón para mostrar u ocultar el menú en dispositivos móviles. -->
         <button
-          @click="expanded = !expanded"
-          data-collapse-toggle="mobile-menu-2"
-          type="button"
-          class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-          aria-controls="mobile-menu-2"
-          aria-expanded="false"
-         
-          aria-label="Whats"
+        data-collapse-toggle="mobile-menu-2"
+        type="button"
+        class="alert inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        aria-controls="mobile-menu-2"
+        aria-label="Whats"
         >
+
           <svg
             class="w-6 h-6"
             fill="currentColor"
@@ -69,8 +65,9 @@ var menu = {
       </div>
       <!-- Tipo: Menú de navegación en dispositivos de escritorio. Descripción: Contiene los enlaces del menú en dispositivos de escritorio. -->
       <div
-        class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-0 "
-        :class="{ 'hidden': !expanded }"
+        class="alert hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-0  "
+       
+       
         id="mobile-menu-2"
       >
         <ul
@@ -80,7 +77,7 @@ var menu = {
           <li>
             <a
               href="/AboutUs"
-              @click="expanded = false"
+              id="mobile-menu-3"
               class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-500 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
               >Acerca de nosotros</a
             >
@@ -89,7 +86,7 @@ var menu = {
           <li>
             <a
               href="#contactenos"
-              @click="expanded = false"
+              id="mobile-menu-4"
               class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-500 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
               >Contáctenos</a
             >
@@ -99,6 +96,62 @@ var menu = {
       </div>
     </div>
   </nav>
+  
   <!-- Tipo: Fin de la barra de navegación. -->
 </header>
 <!-- Tipo: Fin del componente header. -->
+<script>
+
+const buttons = document.querySelectorAll('button.alert');
+let expanded = false;
+const a1 = document.getElementById('mobile-menu-3');
+const a2 = document.getElementById('mobile-menu-4');
+const miDiv = document.getElementById('mobile-menu-2');
+  
+
+// Maneja los clics en cada botón.
+buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+    expanded = !expanded;
+    
+
+    // Obtenemos una referencia al div
+    
+    
+    
+    
+
+    // Cambiamos el estilo según el valor de expanded
+    if (expanded) {
+      miDiv?.classList.remove('hidden'); // Mostrar el div
+    } else {
+      miDiv?.classList.add('hidden'); // Ocultar el div
+    }
+  });
+
+  a1?.addEventListener("click", () => {
+    expanded = !expanded
+    
+    
+    if (expanded) {
+      miDiv?.classList.remove('hidden'); // Mostrar el div
+    } else {
+      miDiv?.classList.add('hidden'); // Ocultar el div
+    }
+   })
+
+   a2?.addEventListener("click", () => {
+    expanded = !expanded
+    
+    if (expanded) {
+      miDiv?.classList.remove('hidden'); // Mostrar el div
+    } else {
+      miDiv?.classList.add('hidden'); // Ocultar el div
+    }
+   })
+
+});
+
+ 
+
+</script>

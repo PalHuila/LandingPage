@@ -25,7 +25,7 @@ module.exports = {
       fontFamily: {
         Blinker: ["Blinker", "sans-serif"],
         Josefin: ["Josefin Sans", "sans-serif"],
-        Work: ["Work Sans", "sans-serif"],
+  
       },
 
       screens: {
