@@ -3,42 +3,42 @@
 ---
 
 <!-- Tipo: Comienzo del componente header. Descripción: Encabezado del sitio web con barra de navegación y logo. -->
-<header class="mb-20 z-50  ">
+<header class="  z-50">
   <!-- Tipo: Comienzo de la barra de navegación. Descripción: Contiene el menú de navegación y el logo del sitio. -->
   <nav
-    class="border-primary-50 lg:px-5 py-2.5 rounded-br-lg rounded-bl-lg items-center bg-white dark:bg-gray-900 fixed w-full z-50 top-0 left-0 border-b "
+    class="border-primary-50 lg:px-5 py-2.5 rounded-br-lg rounded-bl-lg items-center bg-white sticky   w-full z-50 top-0 left-0 border-b "
   >
     <!-- Tipo: Contenedor principal. Descripción: Contiene todos los elementos del encabezado alineados en una fila. -->
-    <div class="flex flex-wrap justify-center items-center max-w-[1280px] mx-auto xl:min-w-[1280px]">
+    <div class="flex flex-wrap justify-center items-center max-w-[1280px] mx-auto xl:min-w-[1280px] sm:gap-10">
       <!-- Tipo: Enlace al inicio. Descripción: Logo del sitio con enlace a la página principal. -->
-      <a href="index.html" class="flex  mr-5">
+      <a href="index.html" class="flex ">
         <span
-          class="font-Work font-[1000] self-center bg:text-2xl sm:text-3xl whitespace-nowrap text-primary-500 ms-2"
+          class="font-Blinker font-[1000] self-center text-[2rem] sm:text-3xl whitespace-nowrap text-primary-500 "
           >CenturHuila</span
         >
         <img
           dir="ltr"
           src="centurhuila.svg"
-          class="h-9 sm:h-9"
+          width="30px"
+          height="30px"
           alt="CenturHuila"
           loading="lazy"
         />
       </a>
       <!-- Tipo: Contenedor del menú de navegación en dispositivos móviles. Descripción: Se muestra solo en dispositivos móviles y contiene el botón para desplegar el menú. -->
-      <div  class="flex items-center lg:order-2 md:ml-[20%] ">
+      <div  class="flex items-center lg:order-2 ">
         <!-- Tipo: Botón para descargar la APP. Descripción: Botón para descargar la aplicación móvil del sitio. -->
         <a
           href="index.html#banner"
-          class="font-Work text-white font-bold bg-[#37a301] hover:bg-primary-700 focus:ring-4 focus:ring-primary-300 rounded-lg bg:text-lg sm:text-xl px-3 lg:px-3 py-2 lg:py-2.5 dark:bg-primary-500 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
+          class="font-Work text-white font-bold  bg-primary-500 hover:bg-primary-700 focus:ring-4 focus:ring-primary-300 rounded-xl text-xl px-3 lg:px-3 py-2 lg:py-2.5 "
           >Conoce el Huila!</a
         >
         <!-- Tipo: Botón para desplegar el menú en dispositivos móviles. Descripción: Botón para mostrar u ocultar el menú en dispositivos móviles. -->
         <button
-        data-collapse-toggle="mobile-menu-2"
         type="button"
-        class="alert inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-        aria-controls="mobile-menu-2"
-        aria-label="Whats"
+        class="alert inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
+        aria-label="Cerrar alerta"
+       
         >
 
           <svg
@@ -76,9 +76,9 @@
           <!-- Tipo: Enlace a la página "Acerca de nosotros". Descripción: Enlace a la sección "Acerca de nosotros" del sitio. -->
           <li>
             <a
-              href="/AboutUs"
+              href="#contactenos"
               id="mobile-menu-3"
-              class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-500 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+              class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-500 lg:p-0"
               >Acerca de nosotros</a
             >
           </li>
@@ -87,7 +87,7 @@
             <a
               href="#contactenos"
               id="mobile-menu-4"
-              class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-500 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+              class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-500 lg:p-0 "
               >Contáctenos</a
             >
           </li>

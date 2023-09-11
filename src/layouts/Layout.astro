@@ -1,51 +1,44 @@
-<!-- Importa el archivo de estilos "Layout.css" -->
 ---
+interface Props {
+	title: string;
+}
 import "../styles/Layout.css";
 const { title } = Astro.props;
-
 ---
+
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
 
+    
+    
+
     <meta charset="UTF-8">
     <!-- Enlaces a hojas de estilo y fuentes externas -->
     <meta
-  name="description"
-  content="Descubre el encanto del Huila con la mejor plataforma de turismo. Descarga gratis nuestra app de turismo y sumérgete en guías, recomendaciones y emocionantes actividades."
->
-
-
-
-
-
-
-
-
-
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
+		name="description"
+		content="Descubre el encanto del Huila con la mejor plataforma de turismo. Descarga gratis nuestra app de turismo y sumérgete en guías, recomendaciones y emocionantes actividades."
+	>
     <!-- Ícono de la página web -->
     <link rel="icon" href="centurhuila.svg" type="image/x-icon" />
-    <!-- Enlace a una biblioteca de iconos (FontAwesome) -->
- 
-
+    
     <!-- Configuraciones de codificación y vista del documento -->
     <meta charset="UTF-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0 minimum-scale=1.0"
     />
-    <!-- Título de la página con el valor de la variable "title" de Astro.props -->
-    <title>Centurhuila - {title}</title>
+
+ <!-- Título de la página con el valor de la variable "title" de Astro.props -->
+  <title>Centurhuila - {title}</title>
+
+
   </head>
   <body>
     <!-- Contenido principal del sitio -->
     <main class="flex-grow">
-      <slot />
+      <slot/>
     </main>
     <!-- Enlaces a scripts externos -->
   
